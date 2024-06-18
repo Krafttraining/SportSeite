@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text 01</title>
+    <title>Text01.html</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/showdown@2.0.3/dist/showdown.min.js"></script>
 </head>
 <body>
     <header>
@@ -13,34 +12,19 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="text01.html">Text 01</a></li>
-                <li><a href="text02.html">Text 02</a></li>
-                <li><a href="text03.html">Text 03</a></li>
-                <!-- Füge hier weitere Links zu deinen Markdown-Dateien hinzu -->
+                <li><a href="Text01.html">Text01</a></li><li><a href="text02.html">text02</a></li><li><a href="text03.html">text03</a></li><li><a href="text04.html">text04</a></li><li><a href="text05.html">text05</a></li><li><a href="text06.html">text06</a></li><li><a href="text07.html">text07</a></li><li><a href="text08.html">text08</a></li><li><a href="text09.html">text09</a></li><li><a href="text10.html">text10</a></li><li><a href="text11.html">text11</a></li><li><a href="text12.html">text12</a></li><li><a href="text13.html">text13</a></li><li><a href="text14.html">text14</a></li><li><a href="text15.html">text15</a></li><li><a href="text16.html">text16</a></li><li><a href="text17.html">text17</a></li><li><a href="text18.html">text18</a></li>
             </ul>
         </nav>
     </header>
-    <main id="content"></main>
-    <script>
-        function loadMarkdown(file) {
-            fetch(file)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Netzwerkantwort war nicht ok.');
-                    }
-                    return response.text();
-                })
-                .then(text => {
-                    var converter = new showdown.Converter();
-                    document.getElementById('content').innerHTML = converter.makeHtml(text);
-                })
-                .catch(error => {
-                    document.getElementById('content').innerHTML = '<p>Fehler beim Laden der Datei: ' + error.message + '</p>';
-                });
-        }
-
-        // Lade die Markdown-Datei
-        loadMarkdown('../doku/text01.md'); // Achte darauf, dass der Pfad korrekt ist
-    </script>
+    <main id="content">
+        <h3>Warum dieses Projekt?</h3>
+<p>Ich wollte ein Projekt das mir mit dem Wissen auch nach der Lehre/Schulzeit helfen kann. Ich suchte nach etwas das kein Budget verlangt. Nach reifer Überlegung setzte ich mir etwas in den Kopf das ich schon lange vorhatte, nämlich mit dem coden anzufangen. Mein Wissen dort war wenig und ich musste vom Punkt 0 null aus beginnen. Ich brauchte also ein Projekt, dass ich durchs coden erreiche. Als ich auf der Suche war dachte ich mir es sei gut wenn ich etwas nehme dass mir in der Zukunft Vorteile verschaffen könnte. Lieber gerne möchte ich in der Zukunft im Verkauf arbeiten, was auch mit designing zu tun hat. Durch diese Überlegung kam ich zum Entschluss eine Website zu programmieren. Zur Verfügung waren diese 3 Themenbereiche:</p>
+<ul>
+<li>Portfolio von mir selber</li>
+<li>Dokumentation über den Körperaufbau</li>
+<li>Verkaufswebsite von Kleidern</li>
+</ul>
+<p>Schlussendlich nahm ich das zweite, was auch nach guter Überlegung zu meinem Projekt wurde.</p>
+    </main>
 </body>
 </html>
