@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text 01</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/showdown@2.0.3/dist/showdown.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Sportseite</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="text01.html">Text 01</a></li>
+                <li><a href="text02.html">Text 02</a></li>
+                <li><a href="text03.html">Text 03</a></li>
+                <!-- Füge hier weitere Links zu deinen Markdown-Dateien hinzu -->
+            </ul>
+        </nav>
+    </header>
+    <main id="content"></main>
+    <script>
+        function loadMarkdown(file) {
+            fetch(file)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Netzwerkantwort war nicht ok.');
+                    }
+                    return response.text();
+                })
+                .then(text => {
+                    var converter = new showdown.Converter();
+                    document.getElementById('content').innerHTML = converter.makeHtml(text);
+                })
+                .catch(error => {
+                    document.getElementById('content').innerHTML = '<p>Fehler beim Laden der Datei: ' + error.message + '</p>';
+                });
+        }
+
+        // Lade die Markdown-Datei
+        loadMarkdown('../doku/text01.md'); // Achte darauf, dass der Pfad korrekt ist
+    </script>
+</body>
+</html>
