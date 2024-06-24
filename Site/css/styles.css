@@ -20,7 +20,7 @@ header h1 {
 }
 
 #parallax {
-    background-image: url('../images/Parkinson-Gym.webp'); /* Replace with your image URL */
+    background-image: url('../images/Parkinson-Gym.webp');
     height: 400px;
     background-attachment: fixed;
     background-position: center;
